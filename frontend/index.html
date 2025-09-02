@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>News Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>📰 News Dashboard</h1>
+    <p class="subtitle">Latest headlines, refreshed hourly</p>
+  </header>
+
+  <section class="controls">
+    <div class="control">
+      <label for="searchInput">🔍 Search News:</label>
+      <input type="text" id="searchInput" placeholder="Type keywords...">
+    </div>
+
+    <div class="control">
+      <label for="categorySelect">📂 Filter by Category:</label>
+      <select id="categorySelect">
+        <option value="all">All</option>
+        <option value="business">Business</option>
+        <option value="entertainment">Entertainment</option>
+        <option value="general">General</option>
+        <option value="health">Health</option>
+        <option value="science">Science</option>
+        <option value="sports">Sports</option>
+        <option value="technology">Technology</option>
+      </select>
+    </div>
+
+    <div class="control">
+      <label for="limitSelect">📊 Headlines to Show:</label>
+      <select id="limitSelect">
+        <option value="25">25</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+      </select>
+    </div>
+
+    <div class="buttons">
+      <button id="refreshBtn">🔄 Refresh Now</button>
+      <button id="retryBtn" class="hidden">🔁 Retry</button>
+    </div>
+  </section>
+
+  <section class="status">
+    <p id="lastUpdated">🔄 Auto-updated: --:--</p>
+    <div id="loadingSpinner" class="spinner hidden"></div>
+  </section>
+
+  <main>
+    <h2>⭐ Pinned Favorites</h2>
+    <ul id="favoritesList" class="news-list"></ul>
+
+    <h2>📰 Latest News</h2>
+    <ul id="newsList" class="news-list"></ul>
+  </main>
+
+  <footer>
+    <p>Powered by Azure Functions + Blob Storage</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
